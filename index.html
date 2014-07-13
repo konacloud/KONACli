@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>KONA CLI by konacloud</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>KONA CLI</h1>
+        <p>KONA Command Line Tool</p>
+
+        <p class="view"><a href="https://github.com/konacloud/KONACli">View the Project on GitHub <small>konacloud/KONACli</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/konacloud/KONACli/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/konacloud/KONACli/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/konacloud/KONACli">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="konacli" class="anchor" href="#konacli"><span class="octicon octicon-link"></span></a>KONACli</h1>
+
+<p>KONA Command Line Tool</p>
+
+<h1>
+<a name="download-the-latest" class="anchor" href="#download-the-latest"><span class="octicon octicon-link"></span></a>Download the latest</h1>
+
+<p><a href="https://github.com/konacloud/KONACli/raw/master/releases/kcli.zip">https://github.com/konacloud/KONACli/raw/master/releases/kcli.zip</a></p>
+
+<h1>
+<a name="add-an-alias" class="anchor" href="#add-an-alias"><span class="octicon octicon-link"></span></a>Add an alias</h1>
+
+<p>after download make and alias to 'sh kona.sh' like this</p>
+
+<pre><code>alias kona='sh /Users/santiago/kona/kona.sh'
+</code></pre>
+
+<p>we asume that you hace the alias kona</p>
+
+<h1>
+<a name="login" class="anchor" href="#login"><span class="octicon octicon-link"></span></a>Login</h1>
+
+<p>Only need to login one time</p>
+
+<pre><code>santiagos-mbp:kona santiago$ kona --login
+Enter your userId: taio
+Enter your secret password: 
+{"success":true}
+Login success!!
+santiagos-mbp:kona santiago$ 
+</code></pre>
+
+<h1>
+<a name="apps" class="anchor" href="#apps"><span class="octicon octicon-link"></span></a>Apps</h1>
+
+<p>List my apps</p>
+
+<pre><code>santiagos-mbp:kona santiago$ kona --apps
+0 - ticket
+1 - searchTest
+2 - samples
+3 - demo
+4 - TramitesUY
+5 - penca
+6 - tbpm
+7 - hello
+8 - CookerApp
+santiagos-mbp:kona santiago$ 
+</code></pre>
+
+<h1>
+<a name="download-app" class="anchor" href="#download-app"><span class="octicon octicon-link"></span></a>Download app</h1>
+
+<pre><code>santiagos-mbp:kona santiago$ kona --download hello
+Downloading file...please wait
+Temp file created /Users/santiago/kona/taio/hello/1405212245981.zip
+Extracting file...please wait
+file created : /Users/santiago/kona/taio/hello/readme
+file created : /Users/santiago/kona/taio/hello/apis/timeUtil.js
+file created : /Users/santiago/kona/taio/hello/libs/timeUtil.js
+file created : /Users/santiago/kona/taio/hello/apis/api.js
+file created : /Users/santiago/kona/taio/hello/models/Person.js
+file created : /Users/santiago/kona/taio/hello/apis/asdf.js
+file created : /Users/santiago/kona/taio/hello/apis/rr.js
+Removing temp file ?true
+Done
+santiagos-mbp:kona santiago$ 
+</code></pre>
+
+<h1>
+<a name="push-app" class="anchor" href="#push-app"><span class="octicon octicon-link"></span></a>Push app</h1>
+
+<pre><code>santiagos-mbp:kona santiago$ kona --push hello
+file found/Users/santiago/kona/taio/hello/models/Person.js
+file found/Users/santiago/kona/taio/hello/apis/api.js
+file found/Users/santiago/kona/taio/hello/apis/asdf.js
+file found/Users/santiago/kona/taio/hello/apis/rr.js
+file found/Users/santiago/kona/taio/hello/apis/timeUtil.js
+push all this? y/n y
+-&gt; Push file Person.js
+--&gt; Resource Id mr_Person
+--&gt; Resource Content /Users/santiago/kona/taio/hello/models/Person.js
+{"success":true}
+-&gt; Push file api.js
+--&gt; Resource Id r_api
+--&gt; Resource Content /Users/santiago/kona/taio/hello/apis/api.js
+{"success":true}
+-&gt; Push file asdf.js
+--&gt; Resource Id r_asdf
+--&gt; Resource Content /Users/santiago/kona/taio/hello/apis/asdf.js
+{"success":true}
+-&gt; Push file rr.js
+--&gt; Resource Id r_rr
+--&gt; Resource Content /Users/santiago/kona/taio/hello/apis/rr.js
+{"success":true}
+-&gt; Push file timeUtil.js
+--&gt; Resource Id r_timeUtil
+--&gt; Resource Content /Users/santiago/kona/taio/hello/apis/timeUtil.js
+{"success":true}
+santiagos-mbp:kona santiago$ 
+</code></pre>
+
+<h1>
+<a name="help" class="anchor" href="#help"><span class="octicon octicon-link"></span></a>Help</h1>
+
+<pre><code>santiagos-mbp:kona santiago$ kona --help
+[ option: help  :: help ]
+[ option: download  [ARG] :: download one app ]
+[ option: login  :: login into konacloud ]
+[ option: push  [ARG] :: push one app ]
+[ option: apps  :: list apps ]
+santiagos-mbp:kona santiago$ 
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/konacloud">konacloud</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
