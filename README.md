@@ -6,10 +6,7 @@ KONA Command Line Tool
 
 # Download the latest
 
-```
-wget https://github.com/konacloud/KONACli/raw/master/releases/konacli_v001.zip
-
-```
+https://github.com/konacloud/KONACli/raw/master/releases/kcli.zip
 
 # Add an alias
 
