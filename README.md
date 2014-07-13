@@ -9,7 +9,8 @@ KONA Command Line Tool
 https://github.com/konacloud/KONACli/raw/master/releases/kcli.zip
 # Demo Video
 
-<iframe src="//fast.wistia.net/embed/iframe/1oh4dvjjt6" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="353"></iframe>
+https://konacloud2.wistia.com/medias/1oh4dvjjt6
+
 # Add an alias
 
 after download make and alias to 'sh kona.sh' like this
