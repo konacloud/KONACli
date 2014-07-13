@@ -19,6 +19,12 @@ after download make and alias to 'sh kona.sh' like this
 alias kona='sh /Users/santiago/kona/kona.sh'
 ```
 
+To add the alias permanent, just add here
+
+```
+nano ~/.bash_profile
+```
+
 we asume that you hace the alias kona
 
 # Login
